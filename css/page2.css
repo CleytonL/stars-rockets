@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');   
+
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* BARRA DE NAVEGAÇÃO */
+
+.barra-navegacao{
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    transition: transform .3s;
+    margin-left: 50px;
+}
+
+.logo-response{
+    display: none;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+    margin-left: 50px;
+}
+.menu li a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    display: block;
+    padding: 10px;
+    margin: 0 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* LISTAS DOS FOGUETES */
+
+.barra-meio{
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.bg3{
+    position: fixed;
+    width: 100%;
+    opacity: 0.4;
+}
+
+.foguetes{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foguetes ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 90px;
+
+}
+
+.foguetes li h1{
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.foguetes li img{
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+
+.foguetes li img:hover{
+    transform: scale(1.09);
+}
+
+.foguetes li{
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 5%;
+    padding: 7rem; 
+    padding-top: 1.6rem;
+    padding-bottom: 1.5rem;
+    
+}
+
+/* INFORMAÇÕES DOS FOGUETES */
+
+.falconNove img{
+    position: relative;
+    width: 100%;
+    margin:auto;
+    display: block;
+}
+
+.falconheavy img {
+    position: relative;
+    width: 100%;
+    margin:auto;
+    display: block;
+}
+
+.dragon img{
+    position: relative;
+    width: 100%;
+    margin:auto;
+    display: block;
+}
+
+.falconNove h1{
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.7rem;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    color: #ffffff;
+    padding: 10px 25px;
+    
+
+}
+
+
+.falconheavy h1{
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.7rem;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    padding: 10px 25px;
+    margin-top: 2.2rem;
+
+}
+
+.dragon h1{
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.7rem;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    color: #ffffff;
+    padding: 10px 25px;
+    margin-top: 2.2rem;
+
+}
+
+/* RODAPÉ */
+
+footer{
+    background-color:aliceblue;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+footer ul{
+    display: flex;
+}
+
+footer li{
+    margin-left: 50px;
+    list-style: none;
+}
+
+
+footer li a{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+footer p{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+section {
+    height: 100%;
+}
+
+/* BOTÃO VOLTAR PARA O TOPO */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    text-decoration: none;
+}
+.btn::after {
+    content: "↑";
+    font-size: 32px;
+    font-weight: bold;
+    color: aliceblue;
+    transition: margin-top 250ms;
+}
+.btn:hover::after {
+    margin-top:-8p
+}
+
+
+/* ANIMAÇÃO */
+
+.foguetes{
+    animation: fromTop 2s .2s backwards;
+}
+
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    } 
+}
+
+@media (max-width: 640px){
+    .foguetes li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .foguetes img{
+        display: none;
+    }
+    .foguetes ul{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .bg3{
+        display: none;
+    }
+
+    .falconNove h1{
+        width: 100%;
+    }
+    .falconheavy h1{
+        width: 100%;
+    
+    }
+    .dragon h1{
+        width: 100%;
+    }
+
+    .falconNove img{
+        width: 100%;
+    }
+    .dragon img{
+        width: 100%;
+    }
+    .falconheavy img{
+        width: 100%;
+    }
+
+
+
+   .rodape{
+        align-items: center;
+        justify-content: center;
+        width: 80vh;
+    }
+    .rodape ul{
+        display: grid;
+        width: 100vh;
+        align-items: center;
+        text-align: center;
+        padding: 0 27px;
+    }
+    .rodape li{
+        margin: 10px
+    }
+
+    .barra-navegacao{
+        justify-content: center;
+        background-color: #fff;
+        width: 80vh;
+    }
+    
+    .logo{
+        display: none;
+    }
+
+    .logo-response{
+        display: flex;
+    }
+
+    .menu li{
+        font-size: 20px;
+        background: linear-gradient(90deg, rgb(0, 228, 197) 30%, rgba(11,142,167,1) 98%);
+        border-radius: 5px;
+    }
+
+    .menu .loja{
+        color: #000;
+    }
+
+    .menu .none{
+        display: none;
+    }
+    
+}
+
